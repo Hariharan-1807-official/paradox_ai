@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: paradox-backend
+    env: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: NODE_VERSION
+        value: 18.17.0
